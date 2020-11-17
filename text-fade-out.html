@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Fade-out</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins',sans-serif;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+
+        }
+        h2{
+            position: relative;
+            color: white;
+            font-size: 4rem;
+
+        }
+        h2::before{
+            content: '';
+            position: absolute;
+            left:120%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(90deg,transparent 0%,#000 5%,#000 100%);
+            animation: animate 10s linear forwards;
+
+        }
+        @keyframes animate{
+            0%{
+                left: -20%;
+
+            }
+            50%{
+                left: 120%;
+
+            }
+            100%{
+                left: -20%;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Text Fade in Fade out</h2>
+</body>
+</html>
