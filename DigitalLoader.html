@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #001d10;
+            animation: animationBg 10s linear infinite;
+        }
+        .loading{
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+        .loading .blocks{
+            position: absolute;
+            width: 8px;
+            height: 25px;
+            border-radius: 8px;
+            background: #050c09;
+            left: 50%;
+            transform: rotate(calc(18deg * var(--i)));
+            transform-origin: 0 125px;
+            animation: animate 1.5s ease-in-out infinite;
+            animation-delay: calc(0.05s * var(--i));
+
+        }
+        @keyframes animate{
+            0%,50%{
+                background: #050c09;
+                box-shadow: none;
+            }
+            50.01%,100%{
+                background: #0f0;
+                box-shadow: 0 0 5px #0f0,
+                             0 0 15px #0f0,
+                             0 0 30px #0f0,
+                             0 0 60px #0f0,
+                             0 0 90px #0f0;
+
+
+            }
+
+        }
+        .logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+            font-size: 4em;
+        }
+        @keyframes animationBg{
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+
+        }
+        h3{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-70%);
+            font-size: 2em;
+            letter-spacing: 2px;
+            color: #0f0;
+            text-shadow: 0 0 5px #0f0,
+                             0 0 15px #0f0,
+                             0 0 30px #0f0,
+                             0 0 60px #0f0,
+                             0 0 90px #0f0;
+            
+            animation: animationBg 10s linear infinite;
+        }
+        @keyframes animateText{
+            0%,50%{
+                color: #050c09;
+                text-shadow: none;
+            }
+            50.01%,100%{
+                color: #0f0;
+                text-shadow: 0 0 5px #0f0,
+                             0 0 15px #0f0,
+                             0 0 30px #0f0,
+                             0 0 60px #0f0,
+                             0 0 90px #0f0;
+
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="loading">
+            <div class="blocks" style="--i:1;"></div>
+            <div class="blocks" style="--i:2;"></div>
+            <div class="blocks" style="--i:3;"></div>
+            <div class="blocks" style="--i:4;"></div>
+            <div class="blocks" style="--i:5;"></div>
+            <div class="blocks" style="--i:6;"></div>
+            <div class="blocks" style="--i:7;"></div>
+            <div class="blocks" style="--i:8;"></div>
+            <div class="blocks" style="--i:9;"></div>
+            <div class="blocks" style="--i:10;"></div>
+            <div class="blocks" style="--i:11;"></div>
+            <div class="blocks" style="--i:12;"></div>
+            <div class="blocks" style="--i:13;"></div>
+            <div class="blocks" style="--i:14;"></div>
+            <div class="blocks" style="--i:15;"></div>
+            <div class="blocks" style="--i:16;"></div>
+            <div class="blocks" style="--i:17;"></div>
+            <div class="blocks" style="--i:18;"></div>
+            <div class="blocks" style="--i:19;"></div>
+            <div class="blocks" style="--i:20;"></div>
+            
+        </div>
+        <svg  class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+         width="104" height="104"
+         viewBox="0 0 172 172"
+         style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="#001d10"></path><g fill="#ffffff"><path d="M156.13342,95.92308c0,41.01022 -32.43089,74.08714 -72.76923,74.08714c-12.58474,0 -23.82572,-3.30769 -33.7488,-8.60517l5.29747,-10.56912c8.60517,4.6256 18.52825,7.26142 29.09736,7.26142c33.74879,0 61.52824,-27.77945 61.52824,-62.17428c0,-21.16406 -10.59495,-40.36418 -27.13341,-51.60517v58.89243l-20.49219,-19.20012v-44.98978l-26.46154,60.21033h25.14363v-9.92308l23.79988,22.48197l-24.47176,19.20012v-9.92308h-33.74879l-21.8101,49.61538l-27.13342,-0.67187l66.82572,-136.26142c-32.43089,1.96394 -58.22056,28.42548 -58.22056,62.17428c0,11.24099 2.63582,21.83594 7.93329,30.44111l-5.94351,11.88702c-8.60517,-11.88702 -13.23077,-27.10758 -13.23077,-43c0,-41.01022 32.40504,-74.08714 72.76923,-74.08714c0.64603,0 1.3179,0 1.96394,0l10.59495,-21.16406h22.48197v30.44111c21.83594,12.55889 37.72837,37.03065 37.72837,65.48197zM95.92308,137.60517h21.16406v-18.52824z"></path></g><path d="" fill="none"></path></g></g>
+        </svg>
+        
+        
+
+
+    </section>
+    <h3>Whatever it takes</h3>
+
+</body>
+</html>
